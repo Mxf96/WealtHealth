@@ -1,0 +1,22 @@
+/* Reset moderne */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Styles globaux */
+body {
+  font-family: "Inter", sans-serif;
+  background: #f5f8fa;
+  color: #1e1e1e;
+  line-height: 1.6;
+}
+
+/* Liens global */
+a {
+  color: inherit;
+  text-decoration: none;
+}

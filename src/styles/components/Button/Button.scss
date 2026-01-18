@@ -1,0 +1,19 @@
+.btn {
+  padding: 0.7rem 1.5rem;
+  background: #72b993;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  transition: transform 0.2s ease, background 0.3s ease;
+
+  &:hover {
+    background: #5aa57e;
+    transform: scale(1.05);
+  }
+}

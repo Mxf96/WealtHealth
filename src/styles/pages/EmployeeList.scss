@@ -1,0 +1,26 @@
+.employee-list {
+  width: min(1200px, 90%);
+  margin: 2rem auto;
+  font-family: "Inter", sans-serif;
+  text-align: center;
+
+  h2 {
+    font-family: "Merriweather", serif;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .back-home {
+    margin-top: 2rem;
+
+    a {
+      color: #003c57;
+      text-decoration: underline;
+      font-family: "Merriweather", serif;
+
+      &:hover {
+        color: #00648a;
+      }
+    }
+  }
+}
