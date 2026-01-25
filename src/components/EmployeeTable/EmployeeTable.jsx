@@ -36,7 +36,7 @@ function EmployeeTable({ data }) {
 
   const filteredData = useMemo(() => {
     const q = deferredFilter.trim().toLowerCase();
-    if (!q) return safeData; // ✅ si pas de recherche, on ne filtre pas du tout
+    if (!q) return safeData; // si pas de recherche, on ne filtre pas du tout
 
     return safeData.filter((row) => {
       if (!row || typeof row !== "object") return false; // sécurité

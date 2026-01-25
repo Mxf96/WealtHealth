@@ -1,0 +1,8 @@
+npm create vite@latest WealtHealth -- --template react
+npm install
+npm install react-router-dom
+npm install sass
+npm install @reduxjs/toolkit react-redux
+npm install react-datepicker date-fns
+npm install @tanstack/react-table
+npm install react-modal-wealthealth

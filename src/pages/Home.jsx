@@ -6,7 +6,8 @@ import { addEmployee } from "../store/employeesSlice";
 import Button from "../components/Button/Button";
 
 // Modal React
-import Modal from "../components/Modal/Modal";
+import { Modal } from "react-modal-wealthealth";
+import "react-modal-wealthealth/style.css";
 
 // Lazy load du DatePicker
 const DatePicker = lazy(() => import("react-datepicker"));
