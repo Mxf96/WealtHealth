@@ -1,0 +1,51 @@
+.dropdown {
+  width: 100%;
+  position: relative;
+  font-family: "Inter", sans-serif;
+  margin: 0.5rem 0;
+
+  &__label {
+    font-weight: 500;
+    text-align: left;
+    display: block;
+    margin-bottom: 0.3rem;
+  }
+
+  &__selected {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__arrow {
+    font-size: 0.8rem;
+  }
+
+  &__menu {
+    position: absolute;
+    width: 100%;
+    margin-top: 0.3rem;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    list-style: none;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 10;
+  }
+
+  &__item {
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: background 0.2s;
+
+    &:hover {
+      background: #f0f0f0;
+    }
+  }
+}
