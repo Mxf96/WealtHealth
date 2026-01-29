@@ -1,16 +1,122 @@
-# React + Vite
+# HRnet – Conversion en Application React Moderne
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📌 Présentation du projet
 
-Currently, two official plugins are available:
+Ce projet consiste à convertir l’application interne **HRnet**, initialement développée en jQuery, en une version **moderne, performante et maintenable en React**.  
+L’objectif était de remplacer progressivement les plugins jQuery existants par des **composants React maison** ou des librairies modernes, tout en améliorant la stabilité et la vitesse de l’application.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+L’application permet :
 
-## React Compiler
+- de **créer un employé**
+- de **voir la liste des employés**
+- de **stocker les données dans localStorage**
+- d'utiliser des composants React modernes à la place des anciens plugins jQuery
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🚀 Stack technique
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **React + Vite**
+- **Redux Toolkit** pour la gestion de l’état global
+- **React Router** pour la navigation
+- **React DatePicker** (remplace le jQuery datepicker)
+- **Composant Modal custom** (remplace jQuery.modal.js)
+- **Librairie Table React** (remplace DataTables jQuery)
+- **SCSS modulaire**
+- Persistance via **localStorage**
+
+---
+
+## 🏗 Architecture principale
+
+```
+src/
+ ├─ components/
+ │   ├─ Modal/
+ │   ├─ Dropdown/
+ │   ├─ EmployeeTable/
+ │   └─ Header/
+ │
+ ├─ pages/
+ │   ├─ Home.jsx
+ │   └─ EmployeeList.jsx
+ │
+ ├─ store/
+ │   ├─ store.js
+ │   └─ employeesSlice.js
+ │
+ ├─ styles/
+ │   ├─ components/
+ │   ├─ pages/
+ │   └─ main.scss
+ │
+ ├─ App.jsx
+ └─ main.jsx
+```
+
+---
+
+## 🔄 Remplacement des plugins jQuery
+
+| Plugin jQuery original | Solution React                                       |
+| ---------------------- | ---------------------------------------------------- |
+| jQuery Datepicker      | **React DatePicker**                                 |
+| jQuery Modal           | **Modal React custom (fait maison)**                 |
+| jQuery SelectMenu      | **Dropdown React custom**                            |
+| DataTables             | **EmployeeTable React** (filter, pagination, search) |
+
+Le composant Modal a été totalement réécrit et documenté dans un README dédié.
+
+---
+
+## 📦 Installation
+
+```sh
+npm install
+npm run dev
+```
+
+Pour tester avec un build de production :
+
+```sh
+npm run build
+npm run preview
+```
+
+---
+
+## 🧪 Tests Lighthouse
+
+Deux audits ont été réalisés :
+
+### 📍 Version jQuery (ancienne)
+
+- Mauvaise performance
+- Scripts lourds
+- Manipulation DOM inefficace
+- Responsiveness limitée
+
+![Lighthouse jQuery](./docs/lighthouse_old.png)
+
+### 📍 Version React (moderne)
+
+- Temps de chargement grandement amélioré
+- Score Lighthouse nettement plus haut
+- DOM plus léger
+- Composants découplés et modulaires
+
+![Lighthouse React](./docs/lighthouse_react.png)
+
+---
+
+## 📚 Documentation complémentaire
+
+Le README dédié à la migration complète se trouve ici :  
+→ `README_HRNET_MIGRATION.md`
+
+---
+
+## 👤 Auteur
+
+**Maxime FALCETTA** – Développeur Front-End  
+Projet réalisé dans le cadre d’OpenClassrooms – Parcours Développeur Front-End
