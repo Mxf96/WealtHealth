@@ -221,7 +221,7 @@ function Home() {
 
       {/* MODAL */}
       <Modal isOpen={showModal} onClose={() => setShowModal(false)}>
-        <h3>Employee Created!</h3>
+        <h3>Employee Created !</h3>
       </Modal>
     </main>
   );
